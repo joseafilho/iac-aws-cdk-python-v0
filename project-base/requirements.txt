@@ -1,0 +1,10 @@
+-e .
+aws-cdk.core
+aws_cdk.aws_ec2
+aws_cdk.aws_elasticloadbalancingv2
+aws_cdk.aws_elasticloadbalancingv2_targets
+aws_cdk.aws_codedeploy
+aws_cdk.aws_route53
+aws_cdk.aws_cloudfront
+aws_cdk.aws_cloudfront_origins
+aws_cdk.aws_ecs
