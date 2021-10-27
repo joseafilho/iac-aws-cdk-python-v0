@@ -4,7 +4,7 @@ from aws_cdk import core as cdk
 from project_base.project_base_stack import ProjectBaseStack
 
 env_params = {
-    'account' : '575125170529', 
+    'account' : '', 
     'region' : 'us-east-1'
 }
 
