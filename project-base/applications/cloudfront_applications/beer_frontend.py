@@ -11,10 +11,6 @@ from aws_cdk.aws_certificatemanager import ICertificate
 from libraries.s3.bucket_private_builder import BucketPrivateBuilder
 
 class BeerFrontendResources(cdk.Construct):
-
-    @property
-    def sg_siprev(self) -> ISecurityGroup:
-        return self.__sg_service.sg
     
     def __init__(self, scope: cdk.Construct, id: str, certificate: ICertificate, **kwargs):
         super().__init__(scope, id, **kwargs)
