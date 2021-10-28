@@ -5,6 +5,8 @@ from aws_cdk import (
 
 from foundations.foundation_resources import FoundationResources
 from applications.ecs_applications.beer_backend import BeerBackendResources
+from storages.simple_bucket_private import SimpleBucketPrivate
+from storages.bucket_private_ecs import BucketPrivateECS
 from libraries.tags.default_tags import DefaultTags
 
 class ProjectBaseStack(cdk.Stack):
@@ -30,6 +32,14 @@ class ProjectBaseStack(cdk.Stack):
             sg_alb = self.__foundation_resources.sg_alb,
             alb_listener = self.__foundation_resources.alb_https_listener,
             certificate = self.__foundation_resources.cert_company_com_br
+        )
+
+        SimpleBucketPrivate(
+            self, 'company-bucket-private-bk'
+        )
+
+        BucketPrivateECS(
+            self, 'company-bucket-private-ecs-bk'
         )
 
 

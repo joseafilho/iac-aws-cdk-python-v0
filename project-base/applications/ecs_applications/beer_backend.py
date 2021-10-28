@@ -23,7 +23,6 @@ from libraries.ecs.ecr.ecr_builder import ECRBuilder
 from libraries.ecs.task_definition.fargate_task_definition_builder import FargateTaskDefinitionBuilder
 from libraries.ecs.service.ecs_service_builder import ECSServiceBuilder
 from libraries.utils.alb_utils import ALBUtils
-from libraries.s3.bk_private_builder import BucketPrivateBuilder
 
 class BeerBackendResources(cdk.Construct):
 

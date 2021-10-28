@@ -13,7 +13,7 @@ from foundations.alb.alb_main import ALBMain
 from libraries.certificate_manager.certificate_builder import CertificateBuilder, CertificateFromArnBuilder
 from libraries.utils.global_consts import Domains
 from libraries.security_group.security_group_builder import SecurityGroupBuilder
-from libraries.s3.bk_private_builder import BucketPrivateBuilder
+from libraries.s3.bucket_private_builder import BucketPrivateBuilder
 
 class FoundationResources(cdk.Construct):    
 
