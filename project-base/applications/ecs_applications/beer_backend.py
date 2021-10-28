@@ -1,8 +1,5 @@
 from aws_cdk import (
-    aws_cloudfront as cf,
-    aws_cloudfront_origins as origins,
-    core as cdk,
-    aws_iam as iam
+    core as cdk
 )
 
 from aws_cdk.aws_ec2 import (
@@ -15,7 +12,6 @@ from aws_cdk.aws_elasticloadbalancingv2 import (
 )
 
 from libraries.utils.global_consts import Domains
-from aws_cdk.core import Duration
 from aws_cdk.aws_certificatemanager import ICertificate
 from libraries.ecs.cluster.ecs_cluster_builder import ECSClusterBuilder
 from libraries.security_group.security_group_builder import SecurityGroupBuilder

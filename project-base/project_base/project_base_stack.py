@@ -5,6 +5,7 @@ from aws_cdk import (
 
 from foundations.foundation_resources import FoundationResources
 from applications.ecs_applications.beer_backend import BeerBackendResources
+from applications.cloudfront_applications.beer_frontend import BeerFrontendResources
 from storages.simple_bucket_private import SimpleBucketPrivate
 from storages.bucket_private_ecs import BucketPrivateECS
 from libraries.tags.default_tags import DefaultTags
@@ -27,10 +28,15 @@ class ProjectBaseStack(cdk.Stack):
         )
 
         BeerBackendResources(
-            self, '__beer_backend_resources',
+            self, 'beer_backend_resources',
             vpc = self.__vpc,
             sg_alb = self.__foundation_resources.sg_alb,
             alb_listener = self.__foundation_resources.alb_https_listener,
+            certificate = self.__foundation_resources.cert_company_com_br
+        )
+
+        BeerFrontendResources(
+            self, 'beer_frontend_resources',
             certificate = self.__foundation_resources.cert_company_com_br
         )
 
